@@ -1,0 +1,132 @@
+:root {
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --thirdary-text-color: #2196F3;
+    --primary-background-color: #F5F5F5;
+    --secondary-background-color: #F5F4FA;
+    --thirdary-background-color: #2F303A;
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+body {
+    letter-spacing: 0.03em;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-text-color);
+}
+ul {
+    list-style: none;
+}
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+}
+button {
+    font-style: inherit;
+}
+
+/* Header */
+header {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--color-black);
+    text-decoration: none;
+}
+.blue {
+    color: var(--thirdary-text-color);
+}
+.nav a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+.nav a:hover, 
+.nav a:focus {
+    color: var(--thirdary-text-color);
+}
+.number, .mail {
+    color: var(--secondary-text-color);
+}
+.number:hover,
+.number:focus,
+.mail:hover, 
+.mail:focus {
+    color: var(--thirdary-text-color);
+}
+
+/* Hero */
+.hero {
+    letter-spacing: 0.06em;
+    color: var(--color-white);
+}
+.hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+.hero-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+/* Peculiarities */
+.peculiarities .title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+/* What we do */
+.whatWeDo-title {
+    text-align: center;
+}
+
+/* Our team */
+.team-title {
+    text-align: center;
+}
+.team-title .name, .team-title .job-title {
+    font-size: 16px;
+    line-height: 1.18;
+}
+.team-title .name {
+    font-weight: 500;
+}
+
+/* Footer */
+.map {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+        /* Portfolio */
+
+/* Filters */
+.filters {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+}
+
+/* Examples */
+.examples h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+.examples p {
+    font-size: 16px;
+    line-height: 1.88;
+}
