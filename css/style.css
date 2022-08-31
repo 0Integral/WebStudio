@@ -5,6 +5,7 @@
     --primary-background-color: #F5F5F5;
     --secondary-background-color: #F5F4FA;
     --thirdary-background-color: #2F303A;
+    --secondary-bgc-hero-link-color: #188CE8;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-border: #EEEEEE;
@@ -41,6 +42,8 @@ h2 {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
+
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -118,21 +121,29 @@ nav {
 .mail {
     margin-right: 50px;
 }
-.number, .mail {
+.number-link, .mail-link {
     color: var(--secondary-text-color);
 }
-.number:hover,
-.number:focus,
-.mail:hover, 
-.mail:focus {
+.number:hover .icon,
+.number:focus .icon,
+.mail:hover .icon, 
+.mail:focus .icon {
+    fill: var(--thirdary-text-color);
+}
+.number:hover .number-link,
+.number:focus .number-link,
+.mail:hover .mail-link, 
+.mail:focus .mail-link {
     color: var(--thirdary-text-color);
 }
 
 /* Hero */
 .hero {
+    background-color: var(--thirdary-background-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
+
     letter-spacing: 0.06em;
     color: var(--color-white);
-    background-color: var(--thirdary-background-color);
 
     text-align: center;
     padding-top: 200px;
@@ -162,6 +173,13 @@ nav {
     padding-left: 32px;
     margin-top: 30px;
 }
+.hero-link:hover,
+.hero-link:focus {
+    background-color: var(--secondary-bgc-hero-link-color);
+}
+header .icon {
+    margin-right: 10px;
+}
 
 /* Peculiarities */
 .peculiarities .box {
@@ -171,6 +189,15 @@ nav {
 }
 .peculiarities .item {
     width: calc((100% - 90px) / 4);
+}
+.peculiarities .picture {
+    padding-top: 25px;
+    padding-right: 100px;
+    padding-bottom: 25px;
+    padding-left: 100px;
+    margin-bottom: 30px;
+
+    background-color: var(--secondary-background-color);
 }
 .peculiarities .title {
     font-size: 14px;
@@ -212,7 +239,7 @@ nav {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-.team .item div {
+.team .text {
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -227,6 +254,29 @@ nav {
 }
 .team .job-title {
     color: var(--secondary-text-color);
+}
+.social-network a {
+    gap: 10px;
+    border-radius: 50%;
+}
+.social-network a:hover,
+.social-network a:focus {
+    background-color: var(--thirdary-text-color);
+    fill: var(--color-white);
+}
+
+/* Client */
+.client {
+    display: flex;
+    gap: 30px;
+}
+.client .item {
+    width: calc((100% - 150px) / 6);
+
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
 }
 
 /* Footer */
@@ -243,9 +293,8 @@ address {
     display: flex;
     flex-direction: column;
     font-style: normal;
-}
-address a + a {
-    margin-top: 9px;
+
+    gap: 9px;
 }
 .map {
     color: var(--color-white);
