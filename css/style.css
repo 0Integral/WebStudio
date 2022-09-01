@@ -6,6 +6,7 @@
     --secondary-background-color: #F5F4FA;
     --thirdary-background-color: #2F303A;
     --secondary-bgc-hero-link-color: #188CE8;
+    --icon-color: #AFB1B8;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-border: #EEEEEE;
@@ -42,8 +43,6 @@ h2 {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
-
-    text-align: center;
 }
 a {
     text-decoration: none;
@@ -115,6 +114,10 @@ nav {
 }
 .contact {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.mail, .number {
     display: flex;
     align-items: center;
 }
@@ -228,40 +231,68 @@ header .icon {
     text-align: center;
     margin-bottom: 50px;
 }
-.team .box {
+.team-box {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-.team .item {
+.team-item {
     text-align: center;
     background-color: var(--color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-.team .text {
+.team-content {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.team .name, .team .job-title {
+.team-name, .team-job-title {
     font-size: 16px;
     line-height: 1.18;
 }
-.team .name {
+.team-name {
     font-weight: 500;
     color: var(--primary-text-color);
     margin-bottom: 10px;
 }
-.team .job-title {
+.team-job-title {
     color: var(--secondary-text-color);
+
+    margin-bottom: 16px;
 }
-.social-network a {
+.social-network-box {
+    display: flex;
+
     gap: 10px;
+    justify-content: center;
+}
+.social-network-item {
+    display: inline-block;
+
+    width: 44px;
+    height: 44px;
+
     border-radius: 50%;
 }
-.social-network a:hover,
-.social-network a:focus {
+.social-network-link {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+}
+.social-network-item:hover,
+.social-network-item:focus {
     background-color: var(--thirdary-text-color);
+    fill: var(--color-white);
+}
+.social-network-icon {
+    fill: var(--icon-color);
+}
+.social-network-item:hover .social-network-icon,
+.social-network-item:focus .social-network-icon {
     fill: var(--color-white);
 }
 
@@ -270,13 +301,43 @@ header .icon {
     display: flex;
     gap: 30px;
 }
-.client .item {
+.client-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+.client-box {
+    display: flex;
+    gap: 30px;
+}
+.client-item {
     width: calc((100% - 150px) / 6);
+
+    border: 1px var(--icon-color) solid;
+    border-radius: 5px;
 
     padding-top: 16px;
     padding-right: 32px;
     padding-bottom: 16px;
     padding-left: 32px;
+}
+.client-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.client .icon {
+    fill: var(--icon-color);
+    width: 100%;
+    height: 100%;
+}
+.client-item:hover, 
+.client-item:focus {
+    border-color: var(--thirdary-text-color);
+}
+.client-item:hover .icon,
+.client-item:focus .icon {
+    fill: var(--thirdary-text-color);
 }
 
 /* Footer */
@@ -284,6 +345,9 @@ footer {
     background-color: var(--thirdary-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+.footer-container {
+    display: flex;
 }
 footer .logo {
     display: inline-block;
@@ -302,6 +366,29 @@ address {
 .white {
     color: var(--color-white);
 }
+.footer-contact  {
+    margin-right: 70px;
+}
+footer .social-network {
+    display: flex;
+    align-items: center;
+}
+footer .social-network-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+
+    color: var(--color-white);
+
+    margin-bottom: 20px;
+}
+footer .social-network-item {
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+footer .social-network-icon {
+    fill: var(--color-white);
+}
+
         /* Portfolio */
 
 /* Filters */
