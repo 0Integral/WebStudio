@@ -234,6 +234,8 @@ header .icon {
     width: 528px;
     height: 581px;
 
+    padding: 8px;
+
     background-color: var(--color-white);
 }
 .backdrop.is-hidden {
@@ -243,6 +245,21 @@ header .icon {
 }
 .backdrop.is-hidden .modal {
     transform: scale(1.1);
+}
+.cross {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 }
 
 /* Peculiarities */
