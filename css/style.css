@@ -55,6 +55,10 @@ img {
 }
 button {
     font-style: inherit;
+
+    border: transparent 0 solid;
+
+    padding: 0;
 }
 .container {
     width: 1200px;
@@ -255,6 +259,8 @@ header .icon {
 
     width: 28px;
     height: 28px;
+
+    background-color: var(--color-white);
 
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
