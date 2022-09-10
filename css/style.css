@@ -142,7 +142,7 @@ nav {
     display: flex;
     align-items: center;
 }
-.mail, .number {
+.mail-link, .number-link {
     display: flex;
     align-items: center;
 }
@@ -157,12 +157,14 @@ nav {
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.number .icon, 
-.mail .icon {
+.number-link .icon, 
+.mail-link .icon {
     fill: var(--secondary-text-color);
 }
-.number:hover .icon,
-.mail:hover .icon {
+.number-link:hover .icon,
+.number-link:focus .icon,
+.mail-link:hover .icon,
+.mail-link:focus .icon {
     fill: var(--thirdary-text-color);
 }
 .number-link:hover,
