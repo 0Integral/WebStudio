@@ -279,13 +279,22 @@ header .icon {
 
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+
+    cursor: pointer;
+}
+.cross .icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cross:hover .icon, 
+.cross:focus .icon {
+    fill: var(--thirdary-text-color);
 }
 .modal .title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
 
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 
     color: var(--primary-text-color);
 }
@@ -295,12 +304,17 @@ header .icon {
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form input {
     padding: 11px 40px;
 }
 .modal-form textarea {
     padding: 12px 16px;
+
+    display: block;
 
     resize: none;
 }
@@ -316,20 +330,22 @@ header .icon {
     display: block;
 
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 1.17;
     letter-spacing: 0.01em;
 
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 
     color: var(--secondary-text-color);
 }
 .modal-input .icon {
     position: absolute;
 
-    top: 55%;
+    top: 50%;
     left: 12px;
 
-    transform: translate(-50% -50%)
+    transform: translate(-50% -50%);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input .input:focus,
 .modal-input .input:focus-visible,
@@ -585,7 +601,7 @@ footer {
 .footer-container {
     display: flex;
 
-    align-items: center;
+    align-items: baseline;
 }
 footer .logo {
     display: inline-block;
@@ -681,15 +697,17 @@ footer .social-network-icon {
     text-align: center;
     align-items: center;
 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     background-color: var(--thirdary-text-color);
 }
-footer .form-btn div {
+.footer-btn div {
     margin: 0 auto;
 
     display: flex;
     align-items: center;
 }
-footer .form-btn .text {
+.footer-btn .text {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
