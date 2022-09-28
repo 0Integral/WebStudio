@@ -1,0 +1,47 @@
+.client {
+    display: flex;
+    gap: 30px;
+}
+
+.client__title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.client__box {
+    display: flex;
+    gap: 30px;
+}
+
+.client__link {
+    width: calc((100% - 150px) / 6);
+
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+
+    border: 1px $icon-color solid;
+    border-radius: 5px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &focus {
+        border-color: $thirdary-text-color;
+    }
+}
+
+.client__icon {
+    fill: $icon-color;
+    width: 100%;
+    height: 100%;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .client__link:hover &,
+    .client__link:focus & {
+        fill: $thirdary-text-color;
+    }
+}
+

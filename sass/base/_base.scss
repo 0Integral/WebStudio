@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    letter-spacing: 0.03em;
+    font-family: 'Roboto', sans-serif;
+    color: $primary-text-color;
+    background-color: $color-white;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+ul,
+h1,
+h2,
+h3,
+p {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    font-style: inherit;
+
+    border: transparent 0 solid;
+
+    padding: 0;
+}
+
+.icon {
+    fill: $primary-text-color;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.text--blue {
+    color: $thirdary-text-color;
+}
