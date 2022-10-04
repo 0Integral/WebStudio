@@ -1,3 +1,21 @@
+.modal__button, .footer__button {
+  width: 200px;
+  height: 50px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #2196F3;
+}
+
 *,
 *::after,
 *::before {
@@ -156,7 +174,7 @@ section {
           align-items: center;
 }
 
-.mail {
+.mail__link--header {
   margin-right: 50px;
 }
 
@@ -246,12 +264,6 @@ section {
 }
 
 .socialNetwork {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-right: 93px;
 }
 
@@ -338,24 +350,6 @@ section {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.button {
-  width: 200px;
-  height: 50px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #2196F3;
-}
-
 .footer__button {
   margin: 0 auto;
   display: -webkit-box;
@@ -364,6 +358,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .footer__button .text {
   font-weight: 700;
@@ -465,6 +460,12 @@ section {
   position: absolute;
   top: 8px;
   right: 8px;
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,19 +475,15 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 28px;
-  height: 28px;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .modal__cross .icon {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal__cross:hover .modal__cross .icon, .modal__cross:focus .modal__cross .icon {
+
+.modal__cross:hover .icon,
+.modal__cross:focus .icon {
   fill: #2196F3;
 }
 
@@ -563,14 +560,19 @@ section {
   margin-bottom: 30px;
 }
 
+.agreement__box {
+  margin-right: 8px;
+  height: 16px;
+}
+
 .agreement__icon {
   border: 2px #212121 solid;
   border-radius: 2px;
-  margin-right: 8px;
+  margin: 0;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.agreement__checkbox:checked + .agreement__icon {
+.agreement__checkbox:checked + .agreement__box .agreement__icon {
   background-color: #2196F3;
   border-color: #2196F3;
 }
@@ -589,6 +591,7 @@ section {
 
 .modal__button {
   margin: 0 auto;
+  cursor: pointer;
 }
 .modal__button:hover, .modal__button:after {
   background-color: #188CE8;
@@ -873,9 +876,7 @@ section {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.examples__link:hover,
-.examples__link:focus {
+.examples__link:hover, .examples__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }

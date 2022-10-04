@@ -48,10 +48,6 @@
     top: 8px;
     right: 8px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     width: 28px;
     height: 28px;
 
@@ -61,15 +57,19 @@
     border-radius: 50%;
 
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal__cross .icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    .modal__cross:hover &,
-    .modal__cross:focus & {
-        fill: $thirdary-text-color;
-    }
+.modal__cross:hover .icon,
+.modal__cross:focus .icon {
+    fill: $thirdary-text-color;
 }
 
 .modal__title {
@@ -156,16 +156,22 @@
     margin-bottom: 30px;
 }
 
+.agreement__box {
+    margin-right: 8px;
+
+    height: 16px;
+}
+
 .agreement__icon {
     border: 2px $primary-text-color solid;
     border-radius: 2px;
 
-    margin-right: 8px;
+    margin: 0;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .agreement__checkbox:checked + & {
+    .agreement__checkbox:checked + .agreement__box &{
         background-color: $thirdary-text-color;
         border-color: $thirdary-text-color;
     }
@@ -185,7 +191,11 @@
 }
 
 .modal__button {
+    @extend %button;
+    
     margin: 0 auto;
+
+    cursor: pointer;
 
     &:hover,
     &:after {
