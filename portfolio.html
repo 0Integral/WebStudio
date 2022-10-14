@@ -21,14 +21,14 @@
         <div class="container header__container">
             <nav class="header__nav">
                 <a href="./index.html" aria-label="Логотип WebStudio" class="logo">
-                    <span class="text--blue">Web</span>Studio
+                    <span class="text--blue">Web</span><span class="text--black">Studio</span>
                 </a>
                 <ul class="nav">
                     <li class="nav__item">
-                        <a href="./index.html" class="nav__link">Студія</a>
+                        <a href="./index.html" class="nav__link nav__link--active">Студія</a>
                     </li>
                     <li class="nav__item">
-                        <a href="./portfolio.html" class="nav__link nav__link--active">Портфоліо</a>
+                        <a href="./portfolio.html" class="nav__link">Портфоліо</a>
                     </li>
                     <li class="nav__item">
                         <a href="" class="nav__link">Контакти</a>
@@ -36,51 +36,128 @@
                 </ul>
             </nav>
             <div class="header__contact">
-                <a class="mail__link mail__link--header" href="mailto:info@devstudio.com">
-                    <svg class="mail__icon contact__icon icon" width="16" height="12">
-                        <use href="./img/symbol-defs.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com
-                </a>
-                <a class="number__link" href="tel:+380961111111">
-                    <svg class="number__icon contact__icon icon" width="10" height="16">
-                        <use href="./img/symbol-defs.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11
-                </a>
+                <div class="contact__box">
+                    <a class="contact__link mail__link--header" href="mailto:info@devstudio.com">
+                        <svg class="mail__icon contact__icon icon" width="16" height="12">
+                            <use href="./img/symbol-defs.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                    <a class="contact__link" href="tel:+380961111111">
+                        <svg class="number__icon contact__icon icon" width="10" height="16">
+                            <use href="./img/symbol-defs.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </div>
+            </div>
+            <svg class="header__icon--menu js-open-menu" width="40" height="40">
+                <use href="./img/symbol-defs.svg#icon-menu_burger"></use>
+            </svg>
+            <div class="mobile__container  js-menu-container">
+                <svg class="close__button--header js-close-menu" width="19" height="19">
+                    <use href="./img/symbol-defs.svg#icon-cross"></use>
+                </svg>
+                <ul class="mobile__nav">
+                    <li class="nav__item--mobile">
+                        <a class="nav__link--mobile" href="">Студія</a>
+                    </li>
+                    <li class="nav__item--mobile">
+                        <a class="nav__link--mobile" href="">Портфоліо</a>
+                    </li>
+                    <li class="nav__item--mobile">
+                        <a class="nav__link--mobile" href="">Контакти</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="mobile__contact">
+                        <li>
+                            <a class="number__link--mobile" href="tel:+380961111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mail__link--mobile" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile__socNet">
+                        <li class="socNet__item--mobile">
+                            <a class="socNet__link--mobile" href="">Instagram</a>
+                        </li>
+                        <li class="socNet__item--mobile">
+                            <a class="socNet__link--mobile" href="">Twitter</a>
+                        </li>
+                        <li class="socNet__item--mobile">
+                            <a class="socNet__link--mobile" href="">Facebook</a>
+                        </li>
+                        <li class="socNet__item--mobile">
+                            <a class="socNet__link--mobile" href="">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
-
+    
     <main>
         <section class="portfolio">
-            <div class="container">
+            <div class="container portfolio__container">
                 <h1 class="portfolio__title visually-hidden">Портфоліо</h1>
-                <div class="portfolio__box">
-                    <ul class="portfolio__filters">
-                        <a href="" class="portfolio__link portfolio__link--active">
-                            <li class="portfolio__button">Все</li>
-                        </a>
-                        <a href="" class="portfolio__link">
-                            <li class="portfolio__button">Веб-сайти</li>
-                        </a>
-                        <a href="" class="portfolio__link">
-                            <li class="portfolio__button">Додатки</li>
-                        </a>
-                        <a href="" class="portfolio__link">
-                            <li class="portfolio__button">Дизайн</li>
-                        </a>
-                        <a href="" class="portfolio__link">
-                            <li class="portfolio__button">Маркетинг</li>
-                        </a>
-                    </ul>
-                </div>
-            
+                <ul class="portfolio__filters">
+                    <a href="" class="portfolio__link portfolio__link--active">
+                        <li class="portfolio__button">Все</li>
+                    </a>
+                    <a href="" class="portfolio__link">
+                        <li class="portfolio__button">Веб-сайти</li>
+                    </a>
+                    <a href="" class="portfolio__link">
+                        <li class="portfolio__button">Додатки</li>
+                    </a>
+                    <a href="" class="portfolio__link">
+                        <li class="portfolio__button">Дизайн</li>
+                    </a>
+                    <a href="" class="portfolio__link">
+                        <li class="portfolio__button">Маркетинг</li>
+                    </a>
+                </ul>
                 <ul class="examples">
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img.jpg" alt="Ноутбук" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-first-desktop.jpg 1x, ./img/exemples-first-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-first-desktop.webp 1x, ./img/exemples-first-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-first-tablet.jpg 1x, ./img/exemples-first-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-first-tablet.webp 1x, ./img/exemples-first-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-first-mobile.jpg 1x, ./img/exemples-first-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-first-mobile.webp 1x, ./img/exemples-first-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-first-desktop.jpg" alt="Ноутбук">
+                                </picture>
                                 <div class="examples__description">
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
@@ -93,7 +170,38 @@
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img-1.jpg"  alt="Постер New Orlean vs Golden     Star" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-second-desktop.jpg 1x, ./img/exemples-second-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-second-desktop.webp 1x, ./img/exemples-second-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-second-tablet.jpg 1x, ./img/exemples-second-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-second-tablet.webp 1x, ./img/exemples-second-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-second-mobile.jpg 1x, ./img/exemples-second-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-second-mobile.webp 1x, ./img/exemples-second-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-second-desktop.jpg" alt="Постер New Orlean vs Golden Star">
+                                </picture>
                                 <div class="examples__description">
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це    дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
@@ -106,7 +214,38 @@
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img-2.jpg" alt="Лого ресторану Seafood" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-third-desktop.jpg 1x, ./img/exemples-third-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-third-desktop.webp 1x, ./img/exemples-third-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-third-tablet.jpg 1x, ./img/exemples-third-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-third-tablet.webp 1x, ./img/exemples-third-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-third-mobile.jpg 1x, ./img/exemples-third-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-third-mobile.webp 1x, ./img/exemples-third-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-third-desktop.jpg" alt="Логотип ресторану Seafood">
+                                </picture>
                                 <div class="examples__description">
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
@@ -119,7 +258,38 @@
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img-3.jpg" alt="Навушники" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-fourth-desktop.jpg 1x, ./img/exemples-fourth-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-fourth-desktop.webp 1x, ./img/exemples-fourth-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-fourth-tablet.jpg 1x, ./img/exemples-fourth-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-fourth-tablet.webp 1x, ./img/exemples-fourth-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-fourth-mobile.jpg 1x, ./img/exemples-fourth-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-fourth-mobile.webp 1x, ./img/exemples-fourth-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-fourth-desktop.jpg" alt="Навушники">
+                                </picture>
                                 <div class="examples__description">
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
@@ -132,7 +302,38 @@
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img-4.jpg" alt="Коробки" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-fifth-desktop.jpg 1x, ./img/exemples-fifth-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-fifth-desktop.webp 1x, ./img/exemples-fifth-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-fifth-tablet.jpg 1x, ./img/exemples-fifth-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-fifth-tablet.webp 1x, ./img/exemples-fifth-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-fifth-mobile.jpg 1x, ./img/exemples-fifth-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-fifth-mobile.webp 1x, ./img/exemples-fifth-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-fifth-desktop.jpg" alt="Коробки">
+                                </picture>
                                 <div class="examples__description">
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
@@ -145,7 +346,38 @@
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img-5.jpg" alt="Монітор" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-sixth-desktop.jpg 1x, ./img/exemples-sixth-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-sixth-desktop.webp 1x, ./img/exemples-sixth-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-sixth-tablet.jpg 1x, ./img/exemples-sixth-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-sixth-tablet.webp 1x, ./img/exemples-sixth-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-sixth-mobile.jpg 1x, ./img/exemples-sixth-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-sixth-mobile.webp 1x, ./img/exemples-sixth-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-sixth-desktop.jpg" alt="Монітор">
+                                </picture>
                                 <div class="examples__description">
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
@@ -158,8 +390,39 @@
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img-6.jpg" alt="Видання Limited Edition" width="370" height="294">
-                                <div class="examples__description">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-seventh-desktop.jpg 1x, ./img/exemples-seventh-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-seventh-desktop.webp 1x, ./img/exemples-seventh-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-seventh-tablet.jpg 1x, ./img/exemples-seventh-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-seventh-tablet.webp 1x, ./img/exemples-seventh-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-seventh-mobile.jpg 1x, ./img/exemples-seventh-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-seventh-mobile.webp 1x, ./img/exemples-seventh-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-seventh-desktop.jpg" alt="Видання Limited Edition">
+                                </picture>
+                                <div class="examples__description">      
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
                             </div>
@@ -171,7 +434,38 @@
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img-7.jpg" alt="Лейб" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-eighth-desktop.jpg 1x, ./img/exemples-eighth-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-eighth-desktop.webp 1x, ./img/exemples-eighth-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-eighth-tablet.jpg 1x, ./img/exemples-eighth-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-eighth-tablet.webp 1x, ./img/exemples-eighth-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-eighth-mobile.jpg 1x, ./img/exemples-eighth-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-eighth-mobile.webp 1x, ./img/exemples-eighth-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-eighth-desktop.jpg" alt="Лейб">
+                                </picture>
                                 <div class="examples__description">
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
@@ -184,7 +478,38 @@
                     <a href="" class="examples__link">
                         <li class="examples__item">
                             <div class="examples__img">
-                                <img src="./img/img-8.jpg" alt="Ноутбук" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./img/exemples-ninth-desktop.jpg 1x, ./img/exemples-ninth-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-ninth-desktop.webp 1x, ./img/exemples-ninth-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+
+                                    <source
+                                        srcset="./img/exemples-ninth-tablet.jpg 1x, ./img/exemples-ninth-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-ninth-tablet.webp 1x, ./img/exemples-ninth-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+            
+                                    <source
+                                        srcset="./img/exemples-ninth-mobile.jpg 1x, ./img/exemples-ninth-mobile@2x.jpg 2x"
+                                        media="(min-width: 0px)"
+                                    />
+                                    <source
+                                        srcset="./img/exemples-ninth-mobile.webp 1x, ./img/exemples-ninth-mobile@2x.webp 2x"
+                                        media="(min-width: 0px)"
+                                        type="image/webp"
+                                    />
+
+                                    <img src="./img/exemples-ninth-desktop.jpg" alt="Ноутбук">
+                                </picture>
                                 <div class="examples__description">
                                     <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості прокомпанію чи приватну особу</p>
                                 </div>
@@ -202,42 +527,42 @@
         <div class="container footer__container">
             <div class="footer__contact">
                 <a href="./index.html" aria-label="Логотип WebStudio" class="footer__logo logo">
-                    <span class="text--blue">Web</span><span class="footer__text--white">Studio</span>
+                    <span class="text--blue">Web</span><span class="text--white">Studio</span>
                 </a>
                 <address class="address">
                     <a class="address__map" href="https://goo.gl/maps/zYA9pHqdYhPMSD1U8" target="_blank">м. Київ, пр-т Лесі
                         Українки, 26</a>
-                    <a class="address__mailLink mail__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    <a class="address__numberLink number__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    <a class="address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <a class="address__contact" href="tel:+380961111111">+38 096 111 11 11</a>
                 </address>
             </div>
-            <div class="socialNetwork">
-                <h2 class="socialNetwork__title">ПРИЄДНУЙТЕСЬ</h2>
-                <ul class="socialNetwork__box">
-                    <li class="socialNetwork__item">
-                        <a href="" class="socialNetwork__link">
-                            <svg class="socialNetwork__icon" width="20" height="20">
+            <div class="socialNetwork--footer">
+                <h2 class="socialNetwork__title--footer">ПРИЄДНУЙТЕСЬ</h2>
+                <ul class="socialNetwork__box--footer">
+                    <li class="socialNetwork__item--footer">
+                        <a href="" class="socialNetwork__link--footer">
+                            <svg class="socialNetwork__icon--footer" width="20" height="20">
                                 <use href="./img/symbol-defs.svg#icon-instagram"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="socialNetwork__item">
-                        <a href="" class="socialNetwork__link">
-                            <svg class="socialNetwork__icon" width="20" height="20">
+                    <li class="socialNetwork__item--footer">
+                        <a href="" class="socialNetwork__link--footer">
+                            <svg class="socialNetwork__icon--footer" width="20" height="20">
                                 <use href="./img/symbol-defs.svg#icon-twitter"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="socialNetwork__item">
-                        <a href="" class="socialNetwork__link">
-                            <svg class="socialNetwork__icon" width="20" height="20">
+                    <li class="socialNetwork__item--footer">
+                        <a href="" class="socialNetwork__link--footer">
+                            <svg class="socialNetwork__icon--footer" width="20" height="20">
                                 <use href="./img/symbol-defs.svg#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="socialNetwork__item">
-                        <a href="" class="socialNetwork__link">
-                            <svg class="socialNetwork__icon" width="20" height="20">
+                    <li class="socialNetwork__item--footer">
+                        <a href="" class="socialNetwork__link--footer">
+                            <svg class="socialNetwork__icon--footer" width="20" height="20">
                                 <use href="./img/symbol-defs.svg#icon-linkedin"></use>
                             </svg>
                         </a>
@@ -249,10 +574,10 @@
                     <h2 class="mailingList__title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ<h2>
                 </label>
                 <form action="" class="mailingList__form">
-                    <input id="footer__input" required class="mailingList__email" type="email" placeholder="E-mail">
+                    <input id="footer__input" required class="mailingList__input" type="email" placeholder="E-mail">
                     <button type="submit" class="button footer__button">
-                        <span class="text">Підписатися</span>
-                        <svg class="icon" width="24" height="24">
+                        <span class="button__text--footer">Підписатися</span>
+                        <svg class="button__icon--footer" width="24" height="24">
                             <use href="./img/symbol-defs.svg#icon-send"></use>
                         </svg>
                     </button>
