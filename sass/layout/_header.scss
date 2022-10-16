@@ -1,23 +1,14 @@
-.text--black {
-    color: $color-black;
+.header__nav {
+    display: flex;
+    align-items: center;
 }
-
-@media screen and (min-width: 0px) {
-    .header__nav {
-        display: flex;
-        align-items: center;
-    }
-    .logo {
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 1.16;
-        letter-spacing: 0.03em;
-    }
-    .header__icon--menu {
-        fill: $color-black;
-    }
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+}
+.header__icon--menu {
+    fill: $color-black;
 }
 
 @media screen and (max-width: 767px) {
@@ -53,8 +44,8 @@
         background: $color-white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: opacity $cubic,
+        visibility $cubic;
     }
     .is-open {
         opacity: 1;
@@ -82,14 +73,19 @@
         gap: 32px;
     }
     .nav__link--mobile {
-        font-family: 'Roboto';
-        font-style: normal;
         font-weight: 500;
         font-size: 40px;
         line-height: 1.17;
         letter-spacing: 0.02em;
-    
-        color: $primary-text-color;
+
+        color: $color-black;
+
+        transition: color $cubic;
+
+        &:hover,
+        &:focus {
+            color: $thirdary-text-color
+        }
     }
     .mobile__contact {
         display: flex;
@@ -102,8 +98,6 @@
         margin-bottom: 64px;
     }
     .number__link--mobile {
-        font-family: 'Roboto';
-        font-style: normal;
         font-weight: 500;
         font-size: 34px;
         line-height: 1.17;
@@ -113,8 +107,6 @@
         color: $thirdary-text-color;
     }
     .mail__link--mobile {
-        font-family: 'Roboto';
-        font-style: normal;
         font-weight: 500;
         font-size: 24px;
         line-height: 1.16;
@@ -141,8 +133,6 @@
         }
     }
     .socNet__link--mobile {
-        font-family: 'Roboto';
-        font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 1.22;
@@ -182,33 +172,31 @@
         margin-top: 32px;
         margin-bottom: 32px;
 
-        font-family: 'Roboto';
-        font-style: normal;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
 
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color $cubic;
 
         &:hover,
         &:focus,
         &--active {
             color: $thirdary-text-color;
+        }
+            
+        &--active::after {
+            content: "";
+            position: absolute;
+            border-radius: 2px;
 
-            &::after {
-                content: "";
-                position: absolute;
-                border-radius: 2px;
+            height: 4px;
+            width: 100%;
 
-                height: 4px;
-                width: 100%;
+            background-color: $thirdary-text-color;
 
-                background-color: $thirdary-text-color;
-
-                left: 0;
-                bottom: 0;
-            }
+            left: 0;
+            bottom: 0;
         }
     }
     .header__contact {
@@ -222,8 +210,6 @@
     .contact__link {
         display: flex;
 
-        font-family: 'Roboto';
-        font-style: normal;
         font-weight: 500;
         font-size: 12px;
         line-height: 1.16;
@@ -231,7 +217,7 @@
 
         color: $secondary-text-color;
 
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color $cubic;
         
         &:hover,
         &:focus {

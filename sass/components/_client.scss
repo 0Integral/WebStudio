@@ -1,54 +1,42 @@
-@media screen and (min-width: 0px) {
-    .client__container {
-        display: flex;
+.client__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.client__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+}
+.client__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.client__link {
+    width: calc(50% - 15px);
 
-        flex-direction: column;
+    padding: 16px 0;
 
-        text-align: center;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+
+    transition: border-color $cubic;
+
+    &:hover,
+    &:focus {
+        border-color: $thirdary-text-color;
     }
-    .client__title {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 1.18;
+}
+.client__icon {
+    fill: $icon-color;
     
-        letter-spacing: 0.03em;
-    
-        color: $primary-text-color;
+    transition: fill $cubic;
 
-        margin-bottom: 30px;
-    }
-    .client__box {
-        display: flex;
-
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-    .client__link {
-        width: calc(50% - 15px);
-
-        padding: 16px 0;
-
-        border: 1px solid $icon-color;
-        border-radius: 4px;
-
-        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        &:hover,
-        &:focus {
-            border-color: $thirdary-text-color;
-        }
-    }
-    .client__icon {
-        fill: $icon-color;
-
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        .client__link:hover &,
-        .client__link:focus & {
-            fill: $thirdary-text-color;
-        }
+    .client__link:hover &,
+    .client__link:focus & {
+        fill: $thirdary-text-color;
     }
 }
 @media screen and (min-width: 768px) {
@@ -61,50 +49,3 @@
         width: calc(16.66% - 25px);
     }
 }
-// .client {
-//     display: flex;
-//     gap: 30px;
-// }
-
-// .client__title {
-//     text-align: center;
-
-//     margin-bottom: 50px;
-// }
-
-// .client__box {
-//     display: flex;
-//     gap: 30px;
-// }
-
-// .client__link {
-//     width: calc((100% - 150px) / 6);
-
-//     padding-top: 16px;
-//     padding-right: 32px;
-//     padding-bottom: 16px;
-//     padding-left: 32px;
-
-//     border: 1px $icon-color solid;
-//     border-radius: 5px;
-
-//     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//     &:hover,
-//     &focus {
-//         border-color: $thirdary-text-color;
-//     }
-// }
-
-// .client__icon {
-//     fill: $icon-color;
-//     width: 100%;
-//     height: 100%;
-//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//     .client__link:hover &,
-//     .client__link:focus & {
-//         fill: $thirdary-text-color;
-//     }
-// }
-
